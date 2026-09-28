@@ -1,0 +1,143 @@
+:root {
+  --primary: #2A7CA3;
+  --primary-dark: #1F6A8E;
+  --primary-soft: #E1EEF5;
+  --mint: #B8DCD0;
+  --text: #1B2830;
+  --text-secondary: #55656E;
+  --bg: #F4F7F8;
+  --card: #FFFFFF;
+  --divider: #EDF1F3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #69AED0;
+    --primary-dark: #8FC6E2;
+    --primary-soft: #1E3A4A;
+    --mint: #8CC5B3;
+    --text: #E6EDF0;
+    --text-secondary: #9DADB5;
+    --bg: #10181D;
+    --card: #1A262D;
+    --divider: #24363F;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+header {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 20px 8px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--mint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-mark::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+h1 {
+  margin: 20px 0 4px;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.updated {
+  margin: 0;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+main {
+  max-width: 760px;
+  margin: 24px auto;
+  padding: 8px 28px 28px;
+  background: var(--card);
+  border-radius: 24px;
+}
+
+h2 {
+  margin: 28px 0 6px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+}
+
+p, li { font-size: 1rem; }
+
+ul { margin: 6px 0 12px; padding-left: 1.2rem; }
+
+li { margin-bottom: 6px; }
+
+a { color: var(--primary); font-weight: 700; }
+
+.note {
+  background: var(--primary-soft);
+  border-radius: 16px;
+  padding: 14px 18px;
+  margin: 18px 0;
+}
+
+.links {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0 8px;
+}
+
+.links a {
+  display: block;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: var(--bg);
+  text-decoration: none;
+  color: var(--text);
+}
+
+.links a span {
+  display: block;
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 8px 20px 48px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
